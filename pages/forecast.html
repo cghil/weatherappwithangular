@@ -1,4 +1,11 @@
+<a href="/">Back to search</a>
+<p>
 Forecast for {{ city }}
+</p>
+
+<hr>
+Days: <a href="#/forecast/2" ng-class="{'bg-primary': days === '2'}" >2</a> | <a href="#/forecast/5" ng-class="{'bg-primary': days === '5'}">5</a> | <a href="#/forecast/7" ng-class="{'bg-primary': days === '7'}">7</a>
+<hr>
 
 <div ng-repeat="w in weatherResult.list">
 	<div class="row">
@@ -9,7 +16,11 @@ Forecast for {{ city }}
 				</div>
 
 				<div class="panel-body">
-					Daytime temperature: {{ convertToFahrenheit(w.temp.day) }}
+					<p>Daytime Temp: {{ convertToFahrenheit(w.temp.day) }}</p>
+					<p>Nighttime Temp: {{ convertToFahrenheit(w.temp.night) }}</p>
+					<p>Min Temp: {{ convertToFahrenheit(w.temp.min) }}</p>
+					<p>Max Temp: {{ convertToFahrenheit(w.temp.max )}}</p>
+
 				</div>
 			</div>
 		</div>
