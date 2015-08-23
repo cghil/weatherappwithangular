@@ -1,7 +1,7 @@
 //SERVICES
-weatherApp.service('cityService', function(){
+weatherApp.service('cityService', function($http){
 
-    this.city = 'New York, New York';
+    this.city = 'San Francisco, CA';
     this.weather = null;
 
 });
