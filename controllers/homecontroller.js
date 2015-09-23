@@ -6,7 +6,7 @@ weatherApp.controller('homeController', ['$scope', '$log', '$http', 'cityService
 		.then(function(response){
 			$scope.city = response.data.city + ', ' + response.data.region;
 		});
-	
+
 	$scope.$watch('city', function(){
 
 		cityService.city = $scope.city;
